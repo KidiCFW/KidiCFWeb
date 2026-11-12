@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status — KidiCFW</title>
+<meta name="description" content="Download links and supported-feature status for KidiCFW.">
+<style>
+/* ---- FONT: to use the VTech font, drop its file in /fonts and change the url + name below ---- */
+@font-face{font-family:"Brand";src:url("fonts/GCQuickPro-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
+:root{
+  --brand:"Brand","Arial Rounded MT Bold","Nunito","Trebuchet MS",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bg:#fff;--surface:#f5f7fa;--line:#e3e8ef;--text:#111827;--muted:#6b7280;--accent:#1a7de0;
+  --yes-bg:#dcf3e4;--yes:#17753f;--part-bg:#fdf0c4;--part:#8a6100;--no-bg:#eceff3;--no:#7b8494;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0e1116;--surface:#161b22;--line:#262d38;--text:#e8edf4;--muted:#8b95a5;--accent:#4aadff;
+  --yes-bg:#12301f;--yes:#5fd68e;--part-bg:#3a2f0b;--part:#f1c94b;--no-bg:#1d232c;--no:#7c8696}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--text);background:var(--bg);line-height:1.6}
+a{color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--brand);font-weight:700;margin:0}
+
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:56px}
+nav img{height:24px;display:block}
+nav .sp{flex:1}
+nav a.l{color:var(--muted);text-decoration:none;font-size:.9rem}
+nav a.l:hover{color:var(--text)}
+.btn{display:inline-block;padding:9px 16px;border-radius:6px;font-weight:600;text-decoration:none;font-size:.9rem;border:1px solid var(--line);color:var(--text)}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.discord{background:#5865f2;border-color:#5865f2;color:#fff}
+
+.hero{padding:72px 0 40px}
+.hero img{height:56px;width:auto;display:block;margin-bottom:28px}
+.hero h1{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:10px}
+.hero p{color:var(--muted);max-width:520px;margin:0 0 24px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin-bottom:4px}
+.sub{color:var(--muted);margin:0 0 20px}
+.note{background:var(--surface);border-left:3px solid var(--part);padding:10px 14px;font-size:.9rem;margin-bottom:20px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border-radius:8px;padding:18px}
+.card h3{font-size:1.05rem;margin-bottom:2px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:.9rem}
+.dev{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.dev b{font-family:var(--brand)}
+.dev span{color:var(--muted);font-size:.85rem}
+.bar{height:6px;border-radius:3px;background:var(--line)}
+.bar i{display:block;height:100%;border-radius:3px;background:var(--accent)}
+
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th,td{padding:12px 14px;text-align:center;font-size:.92rem;white-space:nowrap}
+th{font-family:var(--brand);font-weight:700;border-bottom:2px solid var(--text)}
+td:first-child,th:first-child{text-align:left;font-weight:600;background:var(--bg);position:sticky;left:0}
+tbody tr+tr td{border-top:1px solid var(--line)}
+tbody tr.divider td{border-top:2px solid var(--text)}
+.pill{display:inline-block;min-width:58px;padding:2px 10px;border-radius:4px;font-size:.8rem;font-weight:600}
+.y{background:var(--yes-bg);color:var(--yes)}
+.p{background:var(--part-bg);color:var(--part)}
+.n{background:var(--no-bg);color:var(--no)}
+.legend{display:flex;gap:16px;margin-top:14px;color:var(--muted);font-size:.85rem;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:.82rem}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#top"><img src="assets/logo.png" alt="KidiCFW"></a>
+  <span class="sp"></span>
+  <a class="l" href="#downloads">Downloads</a>
+  <a class="l" href="#supported">Supported</a>
+  <a class="l" href="#source">Source</a>
+  <a class="btn discord" href="https://discord.gg/XMe2N63gxv">Discord</a>
+</div></nav>
+
+<header class="hero wrap" id="top">
+  <h1>KidiCFW</h1>
+  <p>Downloads and what’s currently working on each device. This page is updated as the project moves forward.</p>
+  <div class="cta">
+    <a class="btn primary" href="#downloads">Get KidiCFW</a>
+    <a class="btn discord" href="https://discord.gg/XMe2N63gxv">Join our Discord</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="downloads">
+  <h2>Download Links</h2>
+  <p class="sub">Pick the build for your device.</p>
+  <div class="note"><b>Heads up:</b> KidiCFW is community software and comes with no warranty. Use it at your own risk and back up your device first.</div>
+  <div class="grid" id="dl"></div>
+</section>
+
+<section id="progress">
+  <h2>Progress</h2>
+  <p class="sub">How much of each device is working so far.</p>
+  <div class="grid" id="prog"></div>
+</section>
+
+<section id="supported">
+  <h2>What’s Currently Supported</h2>
+  <p class="sub">Feature support per device.</p>
+  <div class="tablewrap"><table id="matrix"></table></div>
+  <div class="legend">
+    <span><span class="pill y">Yes</span> working</span>
+    <span><span class="pill p">Partial</span> works with issues</span>
+    <span><span class="pill p">Yes?</span> unconfirmed</span>
+    <span><span class="pill n">No</span> not yet</span>
+  </div>
+</section>
+
+<section id="source">
+  <h2>Source Code</h2>
+  <p class="sub">KidiCFW is open source. Issues and pull requests are welcome.</p>
+  <a class="btn ghost" href="https://github.com/awesomecfw/KidiCFW">github.com/awesomecfw/KidiCFW</a>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <p>KidiCFW is an unofficial community project and is not affiliated with, endorsed by, or sponsored by VTech. VTech, Kidizoom and related names are trademarks of their respective owners.</p>
+  <p><a href="#top">Back to top</a></p>
+</div></footer>
+
+<script>
+/* ======== EDIT THIS PART ========
+   Everything below the data is generated automatically. */
+
+// Download buttons
+const downloads = [
+  {title:"Latest Release", text:"Stable build for supported devices.", label:"Download", url:"https://github.com/awesomecfw/KidiCFW/releases/latest"},
+  {title:"All Releases",   text:"Older versions and changelogs.",       label:"Browse releases", url:"https://github.com/awesomecfw/KidiCFW/releases"}
+];
+
+// Devices (columns)
+const devices = ["DX2","DX3","DX4"];
+
+// Features (rows): y = yes, n = no, p = partial, q = "Yes?" (unconfirmed).
+// One letter per device, in the same order as above.
+const features = {
+  "Kernel":        ["y","q","n"],
+  "Touch":         ["p","n","n"],
+  "GPU":           ["p","n","n"],
+  "Apps":          ["p","n","n"],
+  "Factory Tests": ["p","n","n"],
+  "Jailbreakable": ["p","n","n"]
+};
+
+// Rows that get a divider line above them
+const dividerBefore = ["Factory Tests"];
+
+/* ======== generated ======== */
+const label = {y:"Yes", n:"No", p:"Partial", q:"Yes?"};
+const el = id => document.getElementById(id);
+
+el("dl").innerHTML = downloads.map(d =>
+  `<div class="card"><h3>${d.title}</h3><p>${d.text}</p><a class="btn primary" href="${d.url}">${d.label}</a></div>`).join("");
+
+el("matrix").innerHTML =
+  `<thead><tr><th></th>${devices.map(d=>`<th>${d}</th>`).join("")}</tr></thead><tbody>` +
+  Object.entries(features).map(([f,v]) =>
+    `<tr${dividerBefore.includes(f)?' class="divider"':''}><td>${f}</td>${v.map(x=>`<td><span class="pill ${x==="q"?"p":x}">${label[x]}</span></td>`).join("")}</tr>`).join("") +
+  `</tbody>`;
+
+const rows = Object.values(features);
+el("prog").innerHTML = devices.map((d,i) => {
+  const score = rows.reduce((s,r)=>s+(r[i]==="y"?1:(r[i]==="p"||r[i]==="q")?.5:0),0);
+  const pct = Math.round(score/rows.length*100);
+  return `<div class="card"><div class="dev"><b>${d}</b><span>${pct}%</span></div><div class="bar"><i style="width:${pct}%"></i></div></div>`;
+}).join("");
+</script>
+</body>
+</html>
